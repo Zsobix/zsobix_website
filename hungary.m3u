@@ -1,0 +1,28 @@
+#EXTM3U
+#EXTINF:64,M1
+#EXTVLCOPT:network-caching=1000
+https://c401-node61-cdn.connectmedia.hu/110101/d7a1a209ba03f0d1b93a6cc1d0998995/67e7ef71/index.m3u8?v=5iip:84.2.99.214
+#EXTINF:64,M2
+#EXTVLCOPT:network-caching=1000
+https://c401-node61-cdn.connectmedia.hu/110102/440b57aaba39b1041f478e0316f12006/67e7f240/index.m3u8?v=5iip:84.2.99.214
+#EXTINF:0,M4 Sport
+#EXTVLCOPT:network-caching=1000
+https://c402-node61-cdn.connectmedia.hu/150104/f2dc04b95e5fbbbdd3e7a1819fce6a51/67e7f318/index.m3u8?v=5iip:84.2.99.214
+#EXTINF:0,M4 Sport+
+#EXTVLCOPT:network-caching=1000
+https://c201-node62-cdn.connectmedia.hu/150106/9b9cc8681d10f4085fe23bb71cd614c8/67e7f42d/index.m3u8?v=5iip:84.2.99.214
+#EXTINF:56,M5
+#EXTVLCOPT:network-caching=1000
+https://c402-node62-cdn.connectmedia.hu/110105/999c1063f09d93c1d76ab465f1577652/67e7f4ff/index.m3u8?v=5iip:84.2.99.214
+#EXTINF:64,Duna
+#EXTVLCOPT:network-caching=1000
+https://c201-node62-cdn.connectmedia.hu/110103/65f5a703c03052f94d97c86433490469/67e7f59a/index.m3u8?v=5iip:84.2.99.214
+#EXTINF:0,Duna World
+#EXTVLCOPT:network-caching=1000
+https://c401-node62-cdn.connectmedia.hu/150106/9f82775cb581055e8724631e5a8bde9c/67e7f5be/index.m3u8?v=5iip:84.2.99.214
+#EXTINF:0,RTL
+#EXTVLCOPT:network-caching=1000
+https://cdn.mediaklikk.org:2082/rtl_0UjMxITNxkjM.m3u8
+#EXTINF:750,HirTV
+#EXTVLCOPT:network-caching=1000
+https://player.mediaklikk.org/hirtv_delayed/0UjMxITNxkjM.m3u8
