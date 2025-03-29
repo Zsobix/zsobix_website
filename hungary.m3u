@@ -17,3 +17,5 @@ https://c401-node62-cdn.connectmedia.hu/150106/9f82775cb581055e8724631e5a8bde9c/
 https://cdn.mediaklikk.org:2082/rtl_0UjMxITNxkjM.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e6/Hirtvujlogo05.jpg",HirTV
 https://player.mediaklikk.org/hirtv_delayed/0UjMxITNxkjM.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2d/Spektrum-home.png",Spektrum Home
+https://cdn.mediaklikk.org:2082/spektrumhome_0UjMxIzNxkjM.m3u8
