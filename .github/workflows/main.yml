@@ -21,6 +21,7 @@ jobs:
     # Runs a single command using the runners shell
     - uses: actions/checkout@v4
     - run: wget https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz
+    - run: rm -rf epg_ripper_HU1.xml
     - run: gunzip epg_ripper_HU1.xml.gz
     - run: |
           git config --global user.name 'Zsobix'
