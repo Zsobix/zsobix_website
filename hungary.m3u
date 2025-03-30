@@ -16,7 +16,7 @@ https://c401-node62-cdn.connectmedia.hu/150106/9f82775cb581055e8724631e5a8bde9c/
 #EXTINF:-1 tvg-id="RTL.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/be/RTL_Logo_2022.png",RTL
 https://cdn.mediaklikk.org:2082/rtl_0UjMxIzNxAzM.m3u8
 #EXTINF:-1 tvg-shift="+1" tvg-id="HIR.TV.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/44/H%C3%ADr_TV.png",HirTV
-https://player.mediaklikk.org:443/hirtv_delayed/0UjMxIzMxAzM.m3u8
+https://player.mediaklikk.org:443/hirtv_delayed/0UjMxIDOxAzM.m3u8
 #EXTINF:-1 tvg-id="Spektrum.Home.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2d/Spektrum-home.png",Spektrum Home
 https://cdn.mediaklikk.org:2082/spektrumhome_0UjMxIzNxkjM.m3u8
 #EXTINF:-1 tvg-id="Euronews.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Euronews_2022.svg/1280px-Euronews_2022.svg.png",Euronews
