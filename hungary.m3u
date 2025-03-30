@@ -14,9 +14,9 @@ https://c201-node62-cdn.connectmedia.hu/110103/65f5a703c03052f94d97c86433490469/
 #EXTINF:-1 tvg-id="Duna.World.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/hu/b/bd/Duna_world_log%C3%B3.png",Duna World
 https://c401-node62-cdn.connectmedia.hu/150106/9f82775cb581055e8724631e5a8bde9c/67e7f5be/index.m3u8?v=5iip:84.2.99.214
 #EXTINF:-1 tvg-id="RTL.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/be/RTL_Logo_2022.png",RTL
-https://onlinestream.live/play.m3u8?s=bc49bf13e5a8326cbd9ee4b15cad5e08&id=6141&ch=1&ext=.m3u8
+https://cdn.mediaklikk.org:2082/rtl_0UjMxIzNxAzM.m3u8
 #EXTINF:-1 tvg-shift="+1" tvg-id="HIR.TV.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/44/H%C3%ADr_TV.png",HirTV
-https://onlinestream.live/play.m3u8?s=bc49bf13e5a8326cbd9ee4b15cad5e08&id=4740&ch=1&ext=.m3u8
+https://player.mediaklikk.org:443/hirtv_delayed/0UjMxIzMxAzM.m3u8
 #EXTINF:-1 tvg-id="Spektrum.Home.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2d/Spektrum-home.png",Spektrum Home
 https://cdn.mediaklikk.org:2082/spektrumhome_0UjMxIzNxkjM.m3u8
 #EXTINF:-1 tvg-id="Euronews.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Euronews_2022.svg/1280px-Euronews_2022.svg.png",Euronews
