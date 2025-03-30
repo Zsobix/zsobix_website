@@ -1,0 +1,33 @@
+# This is a basic workflow that is manually triggered
+
+name: epg pull and host
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      epg:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'epg xml.gz url'
+        # Default value if no value is explicitly provided
+        default: 'https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz'
+        # Input has to be provided for the workflow to run
+        required: true
+        # The data type of the input
+        type: string
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "greet"
+  server:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Runs a single command using the runners shell
+    - uses: actions/checkout@v4
+    - run: wget "${{ inputs.epg }}"
+    - run: gunzip epg_ripper_HU1.xml.gz
