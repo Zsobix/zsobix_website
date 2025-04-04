@@ -2,13 +2,25 @@ import requests
 import re
 m3u = []
 m3u.append('#EXTM3U x-tvg-url="https://zsobix.xyz/epg_ripper_HU1.xml"')
-urls=["mtv1live","mtv2live","mtv4plus","mtv5live","dunalive","os1"]
+urls=["mtv1live","mtv2live","m4","mtv4plus","mtv5live","dunalive","dunaw","os1"]
 for url in urls:
+	if url == "m4":
+		d = requests.get("https://onlinestream.live/m4-sport/videoplayer/5903-1").text.split('"')
+		m3u.append('#EXTINF:-1 tvg-id="m4.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/hu/f/fd/M4_logo.png",M4 Sport')
+		for line in d:
+			if "play.m3u8" in line:
+				m3u.append(requests.get(f"https://onlinestream.live{line}").text.replace("#EXTM3U\n", ""))
+	if url == "dunaw":
+		d = requests.get("https://onlinestream.live/duna-world--m4-sport/videoplayer/5906-2").text.split('"')
+		m3u.append('#EXTINF:-1 tvg-id="Duna.World.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/hu/b/bd/Duna_world_log%C3%B3.png",Duna World')
+		for line in d:
+			if "play.m3u8" in line:
+				m3u.append(requests.get(f"https://onlinestream.live{line}").text.replace("#EXTM3U\n", ""))
 	if url == "os1":
 		d = requests.get("https://onlinestream.live/hir-tv/videoplayer/4740-1").text.split('"')
 		m3u.append('#EXTINF:-1 tvg-shift="+1" tvg-id="HIR.TV.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/44/H%C3%ADr_TV.png",HirTV')
 		for line in d:
-			if line.endswith('.m3u8'):
+			if "play.m3u8" in line:
 				m3u.append(requests.get(f"https://onlinestream.live{line}").text.replace("#EXTM3U\n", ""))
 	else:
 		r = requests.get(f'https://player.mediaklikk.hu/playernew/player.php?video={url}', timeout=15).text
