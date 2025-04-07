@@ -1,22 +1,22 @@
 #EXTM3U x-tvg-url="https://zsobix.xyz/epg_ripper_HU1.xml"
 #EXTINF:-1 tvg-id="m1.HD.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f1/M1_2020.png",M1
-https://c202-node61-cdn.connectmedia.hu/110301/937936af2348e5ec97c72732a02bc184/67f1d5aa/index.m3u8
+https://c202-node62-cdn.connectmedia.hu/110301/54ec461bf446c8a65a79213a3b2e31ab/67f326b1/index.m3u8
 #EXTINF:-1 tvg-id="m2.HD.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/hu/b/b5/M2_gyerekcsatorna_log%C3%B3ja.png",M2
-https://c201-node62-cdn.connectmedia.hu/110302/6d9ad5eeb709c9be48d93fa674c5c08d/67f1d5ab/index.m3u8
+https://c201-node61-cdn.connectmedia.hu/110302/f96f9e031503b52ceac00b598f11144d/67f326b3/index.m3u8
 #EXTINF:-1 tvg-id="m4.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/hu/f/fd/M4_logo.png",M4 Sport
-https://c201-node62-cdn.connectmedia.hu/150104/9e59d3ff39b1a9458617c109d8b000ea/67f1d5ac/index.m3u8
+https://c401-node62-cdn.connectmedia.hu/150104/e2901811b9611560787f37b623732e20/67f326b4/index.m3u8
 
 #EXTINF:-1 tvg-id="m4sport+.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5b/M4_Sport%2B_logo.png",M4 Sport+
-https://c201-node61-cdn.connectmedia.hu/110306/65cea39469f474bfdef634c2e6d4958e/67f1d5af/index.m3u8
+https://c402-node61-cdn.connectmedia.hu/110306/7be2b2d9e322dd1ecc0c61c513ac759b/67f326b6/index.m3u8
 #EXTINF:-1 tvg-id="m5.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b4/M5logo.png",M5
-https://c401-node62-cdn.connectmedia.hu/110305/0723218839b26c9af6bc85f321ea5d6f/67f1d5b0/index.m3u8
+https://c402-node61-cdn.connectmedia.hu/110305/f623432cbd6b23e790b57a489796b0ee/67f326b8/index.m3u8
 #EXTINF:-1 tvg-id="Duna.TV.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/hu/d/d3/Dunatv_logo.png",Duna
-https://c401-node61-cdn.connectmedia.hu/110303/c168df64b0fe8f41407a8b30bcd1ba20/67f1d5b1/index.m3u8
+https://c402-node62-cdn.connectmedia.hu/110303/6fb050ee25ce59324a34c7461421d016/67f326b9/index.m3u8
 #EXTINF:-1 tvg-id="Duna.World.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/hu/b/bd/Duna_world_log%C3%B3.png",Duna World
-https://c201-node61-cdn.connectmedia.hu/150106/37c6ef0f91e79d7a5d90af5acb319e0b/67f1d5b2/index.m3u8
+https://c201-node62-cdn.connectmedia.hu/150106/f7fab66abb0d267624b6ba890754c457/67f326ba/index.m3u8
 
 #EXTINF:-1 tvg-shift="+1" tvg-id="HIR.TV.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/44/H%C3%ADr_TV.png",HirTV
-https://player.mediaklikk.org:443/hirtv_delayed/1ITMzMjN.m3u8
+https://player.mediaklikk.org:443/hirtv_delayed/1ITMzMzN.m3u8
 
 #EXTINF:-1 tvg-id="Euronews.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Euronews_2022.svg/1280px-Euronews_2022.svg.png",Euronews
 https://raw.githubusercontent.com/Zsobix/YouTube_to_m3u/refs/heads/main/youtube.m3u8
