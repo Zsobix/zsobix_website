@@ -6,8 +6,8 @@ permissions:
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
-  schedule:
-    - cron: 0 0/6 * * *
+#  schedule:
+#    - cron: 0 0/6 * * *
   workflow_dispatch:
 
 jobs:
