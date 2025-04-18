@@ -5,11 +5,6 @@
 #						WARNING!!!!:		
 #			you will need to self host because the 
 #			idiotic mediaklikk streams are ip specific
-#
-#					i fucking hate mediaklikk
-#why does the stream need to be fucking encrypted on one stream
-#					but not on the other????
-#also the other stream can be only accessed in an iframe???????
 ################################################################
 
 
@@ -21,7 +16,7 @@ BASE_URL = "https://player.mediaklikk.hu/playernew/player.php?noflash=yes&video=
 m3u = []
 m3u.append('#EXTM3U x-tvg-url="https://zsobix.xyz/epg_ripper_HU1.xml"')
 
-urls=["mtv1live","mtv2live","mtv4live","mtv4plus","mtv5live","dunalive","hirtv"]
+urls=["mtv1live","mtv2live","mtv4live","mtv4plus","mtv5live","dunalive","hirtv","tv2","rtl","sphome"]
 
 for url in urls:
 	if url == "hirtv":
@@ -31,6 +26,24 @@ for url in urls:
 		for line in request:
 			if "play.m3u8" in line:
 				# the line will start with a // or smth so i need to add the origin url
+				m3u.append(get(f"https://onlinestream.live{line}").text.replace("#EXTM3U", "").replace("\n", ""))
+	if url == "tv2":
+		request = get("https://onlinestream.live/tv2/videoplayer/6143-1").text.split('"')
+		m3u.append('#EXTINF:-1 tvg-id="TV2.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/TV2_2008.svg/960px-TV2_2008.svg.png",TV2')
+		for line in request:
+			if "play.m3u8" in line:
+				m3u.append(get(f"https://onlinestream.live{line}").text.replace("#EXTM3U", "").replace("\n", ""))
+	if url == "rtl":
+		request = get("https://onlinestream.live/rtl/videoplayer/6141-1").text.split('"')
+		m3u.append('#EXTINF:-1 tvg-id="RTL.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/be/RTL_Logo_2022.png",RTL')
+		for line in request:
+			if "play.m3u8" in line:
+				m3u.append(get(f"https://onlinestream.live{line}").text.replace("#EXTM3U", "").replace("\n", ""))
+	if url == "sphome":
+		request = get("https://onlinestream.live/spektrum-home/videoplayer/6589-1").text.split('"')
+		m3u.append('#EXTINF:-1 tvg-id="Spektrum.Home.hu" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2d/Spektrum-home.png",Spektrum Home')
+		for line in request:
+			if "play.m3u8" in line:
 				m3u.append(get(f"https://onlinestream.live{line}").text.replace("#EXTM3U", "").replace("\n", ""))
 	#custom logic for m4 sport (i hate you mediaklikk)
 	elif url == "mtv4live":
