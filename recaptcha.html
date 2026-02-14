@@ -3,8 +3,8 @@
     <title>recaptcha</title>
     <script async src="https://www.google.com/recaptcha/api.js?render=6LcRmWssAAAAAP9PyjNe2MjVfsFx1fNnMflfNmd6"></script>
   </head>
-  <body><p id="recaptcha"></p><script>grecaptcha.enterprise.ready(function() {
-                grecaptcha.enterprise.execute('6LdL-lsaAAAAABo0b2M_cFQbrX0Btbo85uZdRXWS', {action: 'submit'}).then(function(token) {
+  <body><p id="recaptcha"></p><script>grecaptcha.ready(function() {
+                grecaptcha.execute('6LdL-lsaAAAAABo0b2M_cFQbrX0Btbo85uZdRXWS', {action: 'submit'}).then(function(token) {
                     document.getElementById("recaptcha").innerHTML = token;
                 });
             });
