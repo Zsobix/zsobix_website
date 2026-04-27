@@ -5,43 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - zsobix</title>
     <link rel="shortcut icon" href="https://minotar.net/helm/Zsobix">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d9df4e2318.js" crossorigin="anonymous"></script>
     <meta name="darkreader-lock">
+    <script>
+    function popup1() {
+    var popup = document.getElementById("popuptext1");
+    popup.classList.toggle("show");
+    }
+    function popup2() {
+    var popup = document.getElementById("popuptext2");
+    popup.classList.toggle("show");
+    }
+    function pronunciation() {
+    var popup = document.getElementById("pronunciation");
+    popup.classList.toggle("show");
+    }
+    </script>
 </head>
 <body>
     <div class="section-grid">
+        <img src="images/scrolldown.png" style="margin: 0; background-position: top left;" />
         <div class="center maindiv rounded">
             <h1 class="inter text-center" style="color: green;">zsobix</h1>
             <h2 class="inter text-center">software developer, website designer, student</h2>
+            <h4 class="inter text-center" style="color: lightgrey;">pronounced: IPA: /ʒobɪks/</h3>
             <div class="grid rounded">
-                <div>
+                <div onclick="github()">
                     <a href="https://github.com/zsobix">
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </div>
-                <div>
+                <div onclick="twitter()">
                     <a href="https://twitter.com/zsobix">
                         <i class="fa-brands fa-twitter"></i>
                     </a>
                 </div>
-                <div>
+                <div onclick="email()">
                     <a href="mailto:index@zsobix.xyz">
                         <i class="fa-solid fa-envelope"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="secondpage rounded">
+        <!-- <div class="secondpage rounded">
             <h1 class="inter inline" style="color: darkgreen; text-decoration: underline;">$ whoami<h1 class="inter blink_me inline" style="color: darkgreen;">  |</h1></h1>
-            <h2 class="inter">hi! i'm zsobix, a software dev, and student from budapest, hungary.</h2>
+            <h2 class="inter">hi! i'm <div class="popup" onclick="pronunciation()" style="text-decoration: underline;">zsobix<span class="popuptext inter" id="pronunciation">IPA: /ʒobɪks/</span></div>, a software dev, and student from budapest, hungary.</h2>
             <h2 class="inter">i made this website, and <a href="https://www.meglelem.hu">meglelem.hu</a></h2>
             <h2 class="inter">you can contact me at <a href="mailto:index@zsobix.xyz">index@zsobix.xyz</a></h2>
+        </div> -->
+        <!-- <div class="secondpage rounded">
+            <h1 class="inter inline" style="color: darkgreen; text-decoration: underline;">$ fastfetch<h1 class="inter blink_me inline" style="color: darkgreen;">  |</h1></h1>
+            <h2 class="inter">pc specs:</h2>
+            <h2 class="inter">- CPU: AMD Ryzen 5 3600</h2>
+            <h2 class="inter">- GPU: AMD Radeon RX 580</h2>
+            <div class="popup" onclick="popup1()">
+                <h2 class="inter inline">- RAM: Corsair Vengeance PRO 32GB 3000MHz  </h2><i class="fa-solid fa-circle-info" style="font-size: 15px;"></i>
+                <span class="popuptext inter" id="popuptext1">I got this in the middle of the AI RAM shortage! yippeee!!! <i class="fa-solid fa-gun"></i><i class="fa-regular fa-face-grin-beam"></i></span>
+            </div>
+            <h2 class="inter">- SSD: Kingston NV3 1TB</h2>
+            <h2 class="inter">- HDD: WD Blue 1TB</h2>
+            <div class="popup" onclick="popup2()">
+                <h2 class="inter inline">- OS: Linux  </h2><i class="fa-solid fa-circle-info" style="font-size: 15px;"></i>
+                <span class="popuptext inter" id="popuptext2">I'd just like to interject for a moment. What you're referring to as Linux, is in fact, GNU/Linux, or as I've recently taken to calling it, GNU plus Linux. Linux is not an operating system unto itself, but rather another free component of a fully functioning GNU system made useful by the GNU corelibs, shell utilities and vital system components comprising a full OS as defined by POSIX. Many computer users run a modified version of the GNU system every day, without realizing it. Through a peculiar turn of events, the version of GNU which is widely used today is often called "Linux", and many of its users are not aware that it is basically the GNU system, developed by the GNU Project. There really is a Linux, and these people are using it, but it is just a part of the system they use. Linux is the kernel: the program in the system that allocates the machine's resources to the other programs that you run. The kernel is an essential part of an operating system, but useless by itself; it can only function in the context of a complete operating system. Linux is normally used in combination with the GNU operating system: the whole system is basically GNU with Linux added, or GNU/Linux. All the so-called "Linux" distributions are really distributions of GNU/Linux.</span>
+            </div>
+            <h2 class="inter">- Distro: Arch Linux</h2>
+        </div> -->
+        <div class="terminal rounded">
+            <div class="terminal-bar">
+                <p class="text-center">zsobix@zsobix-desktop</p>
+                <div style="gap: 0.5rem; display: flex;">
+                    <div class="h-3 w-3" style="background-color: #27C93F; border-radius: 9999px;"></div>
+                    <div class="h-3 w-3" style="background-color: #FFBD2E; border-radius: 9999px;"></div>
+                    <div class="h-3 w-3" style="background-color: #FF5F56; border-radius: 9999px;"></div>
+                </div>
+            </div>
+            <div class="padding">
+                <h3 class="inline" style="color:green;">$</h3>
+                <h3 class="inline" id="userInput"></h3><h3 class="inter blink_me inline" style="color: darkgreen;">  |</h3>
+                <br>
+                <span id="terminal"></span>
+                <input type="text" id="keyboard" autocomplete="off" style="opacity: 0; filter: alpha(opacity=0);"/>
+            </div>
         </div>
-        <p class="inter text-center">© Copyright: 2026 <a href="https://github.com/zsobix">zsobix</a></p>
+        <div class="endbox rounded">
+                <img class="text-center" src="images/internetexplorer.gif" style="width: 88px; height: 31px;"/>
+                <img class="text-center" src="images/made_with_windows.gif" style="width: 88px; height: 31px;"/>
+                <img class="text-center" src="images/sun.gif" style="width: 88px; height: 31px;"/>
+                <br>
+                <p class="inter text-center">© Copyright: 2026 <a href="https://github.com/zsobix">zsobix</a></p>
+        </div>
     </div>
+    <script src="src/index.js"></script>
 </body>
 </html>
