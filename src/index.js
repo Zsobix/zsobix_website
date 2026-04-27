@@ -2,7 +2,7 @@ let userInput, terminalout;
 
 userInput = document.getElementById("userInput");
 terminalout = document.getElementById("terminal");
-// document.getElementById("keyboard").focus();
+document.getElementById("keyboard").focus({preventScroll: true});
 
 terminalout.innerHTML = `<h3 class="inter">run "help" to see all available commands</h3>`;
 const commandinput = function handleUserInput(input) {
@@ -36,7 +36,7 @@ const key = function keyPressed(e) {
 }
 
 const remove = function removekey(e) {
-    if (e.key !== "Backspace" && e.key !== "Delete") {
+    if (e.key !== "Backspace" && e.key !== "Delete" && e.key !== "Backspac" && e.keyCode !== 8 && e.keyCode !== 46) {
         return;
     }
     userInput.innerHTML = userInput.innerHTML.slice(0, -1)
