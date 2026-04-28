@@ -32,6 +32,10 @@ const key = function keyPressed(e) {
         return;
     }
 
+    if (e.key === "Backspace" && e.key === "Delete" && e.key === "Backspac" && e.keyCode === 8 && e.keyCode === 46) {
+        return;
+    }
+
     userInput.innerHTML = input + e.key;
 }
 
@@ -79,5 +83,9 @@ function twitter() {
 }
 
 function email() {
+    window.location.href = "mailto:index@zsobix.xyz"
+}
+
+function quit() {
     window.location.href = "mailto:index@zsobix.xyz"
 }
