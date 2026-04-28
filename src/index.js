@@ -87,5 +87,5 @@ function email() {
 }
 
 function quit() {
-    window.location.href = "mailto:index@zsobix.xyz"
+    window.location.href = "https://www.zsobix.xyz/safe"
 }
