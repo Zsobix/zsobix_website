@@ -196,7 +196,7 @@ a {
     display: inline;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 0.75em;
 }
 ::-webkit-scrollbar-track {
@@ -207,7 +207,7 @@ a {
 ::-webkit-scrollbar-thumb {
     background-color: lightblue;
     border-radius: 100vw;
-}
+} */
 /* Popup container */
 .popup {
   position: relative;
