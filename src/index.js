@@ -11,7 +11,7 @@ const commandinput = function handleUserInput(input) {
     if (input.length === 0) {
         return;
     };
-    if (input === "quit") {
+    if (input === "quit" || input === "exit") {
         window.location.href = "https://www.zsobix.xyz/safe"
         return;
     }
@@ -51,7 +51,7 @@ document.addEventListener("keypress", key)
 
 
 const COMMANDS = {
-    help: `<h3 class="inter">available commands: ['help', 'whoami', 'fastfetch', 'clear', 'pokemon', 'quit']</h3>`,
+    help: `<h3 class="inter">available commands: ['help', 'whoami', 'fastfetch', 'clear', 'pokemon', 'exit']</h3>`,
     whoami: `<h3 class="inter">hi! i'm <div class="popup" onclick="pronunciation()" style="text-decoration: underline;">zsobix<span class="popuptext inter" id="pronunciation">IPA: /ʒobɪks/</span></div>, a software dev, and student from budapest, hungary.</h3><h3 class="inter">i made this website, and <a href="https://www.meglelem.hu">meglelem.hu</a></h3><h3 class="inter">you can contact me at <a href="mailto:index@zsobix.xyz">index@zsobix.xyz</a></h3>`,
     fastfetch: `<h3 class="inter">pc specs:</h3>
             <h3 class="inter">- CPU: AMD Ryzen 5 3600</h3>
