@@ -14,3 +14,6 @@ just start up XAMPP (or just python http server, is xampp even still relevant?)
 and enjoy!
 
 This is a template so you should be able to use this as base on your website.
+
+## Notes
+Improved as a part of <a href="https://hackclub.com">Hack Club's</a> **Flavortown** YSWS (You Ship, We Ship) program.
