@@ -11,29 +11,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d9df4e2318.js" crossorigin="anonymous"></script>
     <meta name="darkreader-lock">
-    <script>
-    function popup1() {
-    var popup = document.getElementById("popuptext1");
-    popup.classList.toggle("show");
-    }
-    function popup2() {
-    var popup = document.getElementById("popuptext2");
-    popup.classList.toggle("show");
-    }
-    function pronunciation() {
-    var popup = document.getElementById("pronunciation");
-    popup.classList.toggle("show");
-    }
-    </script>
 </head>
 <body>
+    <header class="header">
+        <div id="egg2" class="header-left" onclick="egg2()">
+            <img src="images/scrolldown.png" />
+        </div>
+        <button id="dark-mode" class="header-right" onclick="darkmode()">
+            <i class="fa-regular fa-moon" style="font-size: 30px;"></i>
+        </button>
+    </header>
     <div class="section-grid">
-        <img src="images/scrolldown.png" style="margin: 0; background-position: top left; border-radius: 10px;" />
-        <div class="center maindiv rounded">
+        <div id="maindiv" class="center maindiv rounded">
             <h1 class="inter text-center" style="color: green;">zsobix</h1>
             <h2 class="inter text-center">software developer, website designer, student</h2>
-            <h4 class="inter text-center" style="color: lightgrey;">pronounced: IPA: /ʒobɪks/</h3>
-            <div class="grid rounded">
+            <h4 class="inter text-center">pronounced: IPA: /ʒobɪks/</h3>
+            <div id="grid" class="grid rounded">
                 <div onclick="github()">
                     <a href="https://github.com/zsobix">
                         <i class="fa-brands fa-github"></i>
@@ -74,7 +67,7 @@
             </div>
             <h2 class="inter">- Distro: Arch Linux</h2>
         </div> -->
-        <div class="terminal rounded">
+        <div class="terminal rounded" onmouseover="focusterminal()">
             <div class="terminal-bar">
                 <p class="text-center">zsobix@zsobix-desktop</p>
                 <div style="gap: 0.5rem; display: flex;">
@@ -91,10 +84,13 @@
                 <input type="text" id="keyboard" autocomplete="off" style="opacity: 0; filter: alpha(opacity=0);"/>
             </div>
         </div>
-        <div class="endbox rounded">
+        <div id="endbox" class="endbox rounded">
                 <img class="text-center tags" src="images/internetexplorer.gif" />
                 <img class="text-center tags" src="images/made_with_windows.gif" />
                 <img class="text-center tags" src="images/sun.gif" />
+                <img class="text-center tags" src="images/lidl.gif" />
+                <img class="text-center tags" src="images/arch.png" />
+                <img class="text-center tags" src="images/hackclub.png" />
                 <br>
                 <p class="inter text-center">© Copyright: 2026 <a href="https://github.com/zsobix">zsobix</a></p>
         </div>

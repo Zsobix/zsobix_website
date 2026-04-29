@@ -51,7 +51,7 @@ document.addEventListener("keypress", key)
 
 
 const COMMANDS = {
-    help: `<h3 class="inter">available commands: ['help', 'whoami', 'fastfetch', 'clear', 'pokemon', 'exit']</h3>`,
+    help: `<h3 class="inter">available commands: ['help', 'whoami', 'ls', 'fastfetch', 'clear', 'pokemon', 'exit']</h3>`,
     whoami: `<h3 class="inter">hi! i'm <div class="popup" onclick="pronunciation()" style="text-decoration: underline;">zsobix<span class="popuptext inter" id="pronunciation">IPA: /ʒobɪks/</span></div>, a software dev, and student from budapest, hungary.</h3><h3 class="inter">i made this website, and <a href="https://www.meglelem.hu">meglelem.hu</a></h3><h3 class="inter">you can contact me at <a href="mailto:index@zsobix.xyz">index@zsobix.xyz</a></h3>`,
     fastfetch: `<h3 class="inter">pc specs:</h3>
             <h3 class="inter">- CPU: AMD Ryzen 5 3600</h3>
@@ -68,7 +68,12 @@ const COMMANDS = {
             </div>
             <h3 class="inter">- Distro: Arch Linux</h3>`,
     clear: "",
-    pokemon: `<h3 class="inter">my favourite pokemon is snorlax!</h3>`
+    pokemon: `<h3 class="inter">my favourite pokemon is snorlax!</h3>`,
+    ls: `<h3 class="inter">my current projects are:</h3>
+                <h3 class="inter"><a href="https://github.com/zsobix/lidlplus-api">lidlplus-api/</a> (reimplementation of the Lidl Plus loyalty program app API in python)</h3>
+                <h3 class="inter"><a href="https://github.com/zsobix/lidlplus-ui">lidlplus-ui/</a> (a desktop app wrapper for my implementation of the Lidl Plus API)</h3>
+                <h3 class="inter"><a href="https://github.com/zsobix/zsobix_website">zsobix's personal website/</a> (this website's source code!)</h3>
+                <h3 class="inter"><a href="https://github.com/zsobix/hunpull">hunpull/</a> (a hungarian m3u playlist puller)</h3>`
 };
 
 
@@ -88,4 +93,50 @@ function email() {
 
 function quit() {
     window.location.href = "https://www.zsobix.xyz/safe"
+}
+
+function darkmode() {
+    button = document.getElementById('dark-mode')
+    if (button.innerHTML.includes("moon")) {
+        button.innerHTML = `<i class="fa-regular fa-sun" style="font-size: 30px;"></i>`
+        button.classList.toggle('dark')
+        document.body.classList.toggle('dark')
+        document.getElementById('maindiv').classList.toggle('dark')
+        document.getElementById('endbox').classList.toggle('dark')
+        document.getElementById('grid').classList.toggle('dark')
+    } else {
+        button.innerHTML = `<i class="fa-regular fa-moon" style="font-size: 30px;"></i>`
+        button.style.backgroundColor = '#2D2D2D'
+        button.classList.toggle('dark')
+        document.body.classList.toggle('dark')
+        document.getElementById('maindiv').classList.toggle('dark')
+        document.getElementById('endbox').classList.toggle('dark')
+        document.getElementById('grid').classList.toggle('dark')
+    }
+}
+
+function focusterminal() {
+    document.getElementById("keyboard").focus({preventScroll: true});
+}
+
+function egg2() {
+    egg = document.getElementById("egg2")
+    if (egg.innerHTML.includes("scrolldown")) {
+        egg.innerHTML = `<img src="images/dance.gif" />`
+    } else {
+        egg.innerHTML = `<img src="images/scrolldown.png" />`
+    }
+}
+
+function popup1() {
+    var popup = document.getElementById("popuptext1");
+    popup.classList.toggle("show");
+}
+function popup2() {
+    var popup = document.getElementById("popuptext2");
+    popup.classList.toggle("show");
+}
+function pronunciation() {
+    var popup = document.getElementById("pronunciation");
+    popup.classList.toggle("show");
 }

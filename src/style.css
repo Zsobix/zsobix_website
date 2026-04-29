@@ -43,10 +43,14 @@ h3 {
 }
 
 body {
-    background-color: #d2e8fc;
-    scrollbar-color: lightblue aliceblue;
-    scrollbar-width: 0.75em;
+    /* background-color: #d2e8fc; */
+    background-image: linear-gradient(to bottom right, aliceblue, blue);
     margin: 0;
+}
+
+body.dark {
+    background-color: #111111;
+    background-image: none;
 }
 
 .section-grid {
@@ -61,6 +65,24 @@ body {
     padding: 100px;
     padding-top: 75px;
     padding-bottom: 75px;
+}
+
+.maindiv h4 {
+  color: lightgrey;
+}
+
+.maindiv.dark {
+    background-color: black;
+    border-color: white;
+    border-style: dashed;
+}
+
+.maindiv.dark h2 {
+  color: white;
+}
+
+.maindiv.dark h4 {
+  color: #2D2D2D;
 }
 /* .secondpage {
     background-color: white;
@@ -102,6 +124,17 @@ body {
     inset: 0;
 }
 
+.endbox.dark {
+    background-color: black;
+    border-color: white;
+    border-style: dashed;
+}
+
+.endbox.dark p {
+  color: white;
+}
+
+
 .inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -121,6 +154,28 @@ body {
   border: 2px solid black;
   font-size: 25px;
   text-align: center;
+  transition-duration: 0.2s;
+}
+
+.grid div:hover {
+  border: 2px dashed black;
+  background-color: lightgrey;
+}
+
+.grid.dark div {
+  background-color: black;
+  border: 2px solid white;
+  transition-duration: 0.2s;
+}
+
+
+.grid.dark div:hover {
+  border: 2px dashed white;
+  background-color: rgb(49, 49, 49);
+}
+
+.grid.dark div i {
+  color: white;
 }
 
 a {
@@ -256,12 +311,53 @@ a {
 
 
 .terminal-buttons {
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 9999px;
 }
 
 .tags {
   width: 88px; 
   height: 31px;
+}
+
+.header {
+  overflow: hidden;
+}
+
+.header-left {
+  float: left;
+  margin: 0; 
+  background-position: top left; 
+  border-radius: 10px;
+}
+
+.header-right {
+  float: right;
+  border-radius: 25px;
+  border: black solid 3px;
+  background-color: #2D2D2D;
+  margin: 20px;
+  padding: 20px;
+  transition-duration: 0.2s;
+}
+
+.header-right:hover {
+  border: black dashed 3px;
+}
+
+
+.header-right.dark {
+  float: right;
+  border-radius: 25px;
+  border: white solid 3px;
+  background-color: lightgrey;
+  margin: 20px;
+  padding: 20px;
+  transition-duration: 0.2s;
+}
+
+.header-right.dark:hover {
+  border: white dashed 3px;
+  background-color: #2D2D2D;
 }
