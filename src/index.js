@@ -18,9 +18,9 @@ const commandinput = function handleUserInput(input) {
         return;
     }
     if (input === "history") {
-        terminalout.innerHTML = `<h3>command history:</h3> ${localStorage.getItem("history")}<h3>history</h3>`.replace("<h3>", "<h3>- ").replace(" </h3>", ",</h3>")
+        terminalout.innerHTML = `<h3>command history:</h3> ${localStorage.getItem("history")}<h3>- history</h3>`
         cmdhistory = localStorage.getItem("history")
-        cmdhistory += `<h3>${input}</h3>`
+        cmdhistory += `<h3>- ${input},</h3>`
         localStorage.setItem("history", cmdhistory)
         return;
     }
@@ -30,14 +30,13 @@ const commandinput = function handleUserInput(input) {
         return;
     }
     if (Object.keys(COMMANDS).includes(input.replace(" ", ""))) {
-        input = input.replace(" ", "")
-        output = COMMANDS[input]
+        output = COMMANDS[input.replace(" ", "")]
     } else {
-        terminalout.innerHTML = `<h3 class="inter">command not found: "${input}"</h3><h3 class="inter">try command "help" to list all commands</h3>`;
+        terminalout.innerHTML = `<h3>command not found: "${input}"</h3><h3>try command "help" to list all commands</h3>`;
         return;
     }
     cmdhistory = localStorage.getItem("history").replace("null", "")
-    cmdhistory += `<h3>${input} </h3>`
+    cmdhistory += `<h3>- ${input},</h3>`
     localStorage.setItem("history", cmdhistory)
     terminalout.innerHTML = output;
 };
@@ -49,14 +48,15 @@ const key = function keyPressed(e) {
     if (e.key === "Enter") {
         commandinput(input)
         userInput.innerHTML = "";
+        commandIndex = 1
         return;
     }
     if (e.key === "ArrowUp") {
         cmdhistory = localStorage.getItem("history")
         console.log(cmdhistory)
-        cmdhistory = cmdhistory.split("<h3>")
+        cmdhistory = cmdhistory.split("<h3>- ")
         console.log(cmdhistory)
-        userInput.innerHTML = cmdhistory[cmdhistory.length - commandIndex].replace("</h3>", "");
+        userInput.innerHTML = cmdhistory[cmdhistory.length - commandIndex].replace(",</h3>", "");
         if (commandIndex < cmdhistory.length) {
             commandIndex++
         }
@@ -65,12 +65,12 @@ const key = function keyPressed(e) {
     if (e.key === "ArrowDown") {
         cmdhistory = localStorage.getItem("history")
         console.log(cmdhistory)
-        cmdhistory = cmdhistory.split("<h3>")
+        cmdhistory = cmdhistory.split("<h3>- ")
         console.log(cmdhistory)
         if (commandIndex > 1) {
             commandIndex--
         }
-        userInput.innerHTML = cmdhistory[cmdhistory.length - commandIndex].replace("</h3>", "");
+        userInput.innerHTML = cmdhistory[cmdhistory.length - commandIndex].replace(",</h3>", "");
         return;
     }
 
@@ -85,9 +85,9 @@ const remove = function removekey(e) {
     if (e.key === "ArrowUp") {
         cmdhistory = localStorage.getItem("history")
         console.log(cmdhistory)
-        cmdhistory = cmdhistory.split("<h3>")
+        cmdhistory = cmdhistory.split("<h3>- ")
         console.log(cmdhistory)
-        userInput.innerHTML = cmdhistory[cmdhistory.length - commandIndex].replace("</h3>", "");
+        userInput.innerHTML = cmdhistory[cmdhistory.length - commandIndex].replace(",</h3>", "");
         if (commandIndex < cmdhistory.length) {
             commandIndex++
         }
@@ -96,12 +96,12 @@ const remove = function removekey(e) {
     if (e.key === "ArrowDown") {
         cmdhistory = localStorage.getItem("history")
         console.log(cmdhistory)
-        cmdhistory = cmdhistory.split("<h3>")
+        cmdhistory = cmdhistory.split("<h3>- ")
         console.log(cmdhistory)
         if (commandIndex > 1) {
             commandIndex--
         }
-        userInput.innerHTML = cmdhistory[cmdhistory.length - commandIndex].replace("</h3>", "");
+        userInput.innerHTML = cmdhistory[cmdhistory.length - commandIndex].replace(",</h3>", "");
         return;
     }
     if (e.key !== "Backspace" && e.key !== "Delete" && e.key !== "Backspac" && e.keyCode !== 8 && e.keyCode !== 46) {
@@ -171,7 +171,6 @@ function darkmode() {
         document.getElementById('grid').classList.toggle('dark')
     } else {
         button.innerHTML = `<i class="fa-regular fa-moon" style="font-size: 30px;"></i>`
-        button.style.backgroundColor = '#2D2D2D'
         button.classList.toggle('dark')
         document.body.classList.toggle('dark')
         document.getElementById('maindiv').classList.toggle('dark')

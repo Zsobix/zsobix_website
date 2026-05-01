@@ -172,7 +172,7 @@ body.dark {
 
 .grid.dark div {
   background-color: black;
-  border: 2px solid white;
+  border: 4px solid white;
   transition-duration: 0.2s;
 }
 
@@ -344,7 +344,7 @@ a {
 .header-right {
   float: right;
   border-radius: 25px;
-  border: black solid 3px;
+  border: black solid 5px;
   background-color: white;
   margin: 20px;
   padding: 20px;
@@ -360,7 +360,7 @@ a {
 .header-right.dark {
   float: right;
   border-radius: 25px;
-  border: black solid 3px;
+  border: black solid 5px;
   background-color: white;
   margin: 20px;
   padding: 20px;
