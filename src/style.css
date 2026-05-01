@@ -282,8 +282,8 @@ a {
     break-before: page;
     height: fit-content;
     margin-top: calc(297mm - 40mm);
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 28px;
+    margin-right: 28px;
 }
 
 .terminal h3 {
