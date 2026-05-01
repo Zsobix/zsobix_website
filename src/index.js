@@ -36,7 +36,7 @@ const commandinput = function handleUserInput(input) {
         terminalout.innerHTML = `<h3 class="inter">command not found: "${input}"</h3><h3 class="inter">try command "help" to list all commands</h3>`;
         return;
     }
-    cmdhistory = localStorage.getItem("history")
+    cmdhistory = localStorage.getItem("history").replace("null", "")
     cmdhistory += `<h3>${input} </h3>`
     localStorage.setItem("history", cmdhistory)
     terminalout.innerHTML = output;
@@ -115,7 +115,7 @@ document.addEventListener("keypress", key)
 
 
 const COMMANDS = {
-    help: `<h3>available commands: ['help', 'whoami', 'ls', 'fastfetch', 'clear', 'pokemon', 'exit']</h3>`,
+    help: `<h3>available commands: ['help', 'whoami', 'ls', 'fastfetch', 'history', 'clear', 'pokemon', 'exit']</h3>`,
     whoami: `<h3>hi! i'm <div class="popup" onclick="pronunciation()" style="text-decoration: underline;">zsobix<span class="popuptext inter" id="pronunciation">IPA: /ʒobɪks/</span></div>, a software dev, and student from budapest, hungary.</h3><h3 class="inter">i made this website, and <a href="https://www.meglelem.hu">meglelem.hu</a></h3><h3 class="inter">you can contact me at <a href="mailto:index@zsobix.xyz">index@zsobix.xyz</a></h3>`,
     fastfetch: `<h3>pc specs:</h3>
             <h3>- CPU: AMD Ryzen 5 3600</h3>
