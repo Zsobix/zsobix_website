@@ -82,6 +82,13 @@ const key = function keyPressed(e) {
 }
 
 const remove = function removekey(e) {
+    const input = userInput.innerHTML;
+    if (e.key === "Enter") {
+        commandinput(input)
+        userInput.innerHTML = "";
+        commandIndex = 1
+        return;
+    }
     if (e.key === "ArrowUp") {
         cmdhistory = localStorage.getItem("history")
         console.log(cmdhistory)
