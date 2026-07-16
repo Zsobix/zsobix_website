@@ -1,7 +1,8 @@
 # zsobix's website
 this is my personal website which i am revamping right now
 
-"insert picture here"
+<img width="1586" height="884" alt="260716_13h50m37s_screenshot" src="https://github.com/user-attachments/assets/824c73ae-357e-456c-baa4-a130b3ab16b0" />
+
 
 it's in a swiss style, because I like minimalistic things. (also the font looked nice)
 
