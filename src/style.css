@@ -1,373 +1,94 @@
-@media print {
-  @page {
-    size: A4;
-    margin: 20mm;
-  }
-
-  .second-page {
-    break-before: page;
-    padding-top: 20mm;
-  }
+@font-face { 
+    font-family: "Suisse Int'l Semibold"; 
+    src: url("https://framerusercontent.com/assets/NZNod8irILbWmnqW9EFqblG4zI.woff2"); 
+    font-display: swap 
 }
 
-.center {
-  position: absolute;
-  inset: 0;
-  width: fit-content;
-  height: fit-content;
-  margin: auto;
+@font-face { 
+    font-family: "Suisse Int'l Semibold"; 
+    src: url("https://framerusercontent.com/assets/NZNod8irILbWmnqW9EFqblG4zI.woff2"); 
+    font-display: swap; 
+    font-style: normal; 
+    font-weight: 600 
 }
 
-.rounded {
-    border-radius: 15px;
+@font-face { 
+    font-family: "Uncut Plan8 Regular"; 
+    src: url("https://www.zsobix.xyz/fonts/UncutPlan8-Regular.woff2"); 
+    font-display: swap 
 }
 
-.rounded div {
-    border-radius: 12px;
-}
-
-.text-center {
-    text-align: center;
-}
-
-h1 {
-    font-size: 45px;
-}
-
-h2 {
-    font-size: 30px;
-}
-
-h3 {
-    font-size: 1.17em;
-}
 
 body {
-    /* background-color: #d2e8fc; */
-    background-image: linear-gradient(to bottom right, aliceblue, blue);
+    font-family: "Suisse Int'l Semibold", sans-serif;
+    background-color: white;
+    color: hsl(0, 0%, 8%);
     margin: 0;
+    scroll-behavior: smooth;
+}
+h1 {
+    font-size: 50px;
+}
+h5 {
+    font-family: "Uncut Plan8 Regular", sans-serif; 
+    font-size: 11px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -.048em;
+    line-height: 1.35em;
+    margin: 5px;
 }
 
-body.dark {
-    background-color: #111111;
-    background-image: none;
-}
-
-.section-grid {
-  display: grid;
-}
-
-
-.maindiv {
-    background-color: white;
-    border-color: black;
-    border-style: dashed;
-    padding: 100px;
-    padding-top: 75px;
-    padding-bottom: 75px;
-}
-
-.maindiv h4 {
-  color: lightgrey;
-}
-
-.maindiv.dark {
-    background-color: black;
-    border-color: white;
-    border-style: dashed;
-}
-
-.maindiv.dark h2 {
-  color: white;
-}
-
-.maindiv.dark h4 {
-  color: #2D2D2D;
-}
-/* .secondpage {
-    background-color: white;
-    border-color: black;
-    border-style: dashed;
-    padding: 100px;
-    padding-top: 75px;
-    padding-bottom: 75px;
-    break-after: avoid;
-    break-before: page;
-    margin-top: calc(297mm - 40mm);
-}
-.afterpage {
-    background-color: white;
-    border-color: black;
-    border-style: dashed;
-    padding: 100px;
-    padding-top: 75px;
-    padding-bottom: 75px;
-    break-after: avoid;
-    break-before: page;
-    margin-top: 50px;
-} */
-
-.endbox {
-    background-color: white;
-    border-color: black;
-    border-style: dashed;
-    padding: 100px;
-    padding-top: 25px;
-    padding-bottom: 10px;
-    break-after: avoid;
-    break-before: page;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    width: fit-content;
-    height: fit-content;
-    inset: 0;
-}
-
-.endbox.dark {
-    background-color: black;
-    border-color: white;
-    border-style: dashed;
-}
-
-.endbox.dark p {
-  color: white;
-}
-
-
-.inter {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-  font-size: auto;
-}
-
-.jetbrains-mono {
-  font-family: "JetBrains Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-.grid div {
-  background-color: white;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border: 4px solid black;
-  font-size: 25px;
-  text-align: center;
-  transition-duration: 0.2s;
-  margin: 10px;
-}
-
-.grid div:hover {
-  border: 3px dashed black;
-  background-color: lightgrey;
-}
-
-.grid.dark div {
-  background-color: black;
-  border: 4px solid white;
-  transition-duration: 0.2s;
-}
-
-
-.grid.dark div:hover {
-  border: 2px dashed white;
-  background-color: rgb(49, 49, 49);
-}
-
-.grid.dark div i {
-  color: white;
+nav h3 {
+    font-family: "Suisse Int'l Semibold", sans-serif;
+    text-align: end;
 }
 
 a {
-    color: inherit;
+    color: hsl(0, 0%, 8%);
+    text-decoration: none;
+    transition-duration: 0.3s;
+    transition-property: color;
+}
+a:hover {
+    color: hsl(0, 0%, 40%);
 }
 
-.blink_me {
-  animation: blinker 1s step-start infinite;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+.footertext {
+    font-size: 19vw;
+    line-height: 1.5em;
+    text-align: center;
+    margin: 0;
 }
 
 .inline {
     display: inline;
 }
 
-/* ::-webkit-scrollbar {
-    width: 0.75em;
-}
-::-webkit-scrollbar-track {
-    background: aliceblue;
-    border-radius: 100vw;
-    margin-block: .5em;
-}
-::-webkit-scrollbar-thumb {
-    background-color: lightblue;
-    border-radius: 100vw;
-} */
-/* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  width: 250px;
-  background-color: rgb(205, 232, 255);
-  color: black;
-  text-align: center;
-  border-radius: 6px;
-  padding: 20px;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 10%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: rgb(205, 232, 255) transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 0.2s;
-  animation: fadeIn 0.2s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-
-.textmargin {
-  margin-top: 50px;
-}
-
-.terminal {
-    background-color: black;
-    border-color: white;
-    border-style: solid;
-    padding-bottom: 75px;
-    break-after: avoid;
-    break-before: page;
-    height: fit-content;
-    margin-top: calc(297mm - 40mm);
-    margin-left: 28px;
-    margin-right: 28px;
-}
-
-.terminal h3 {
-  color: green;
-  font-family: "JetBrains Mono", monospace;
-  font-weight: bold;
-}
-
-.terminal-bar {
-  display: flex;
-  align-items: center;
-  background-color: #2D2D2D;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-bottom-color: grey;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.terminal-bar p {
-  font-family: "JetBrains Mono", monospace;
-  font-weight: bold;
-  flex: 1 1 0%;
-  color: lightgrey;
-}
-
-.padding {
-  padding: 100px;
-  padding-left: 75px;
-  padding-right: 75px;
+.gridbox {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: hsl(0, 0%, 97%);
 }
 
 
-.terminal-buttons {
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 9999px;
+
+.nav-bar {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: hsl(0, 0%, 97%);
 }
 
-.tags {
-  width: 88px; 
-  height: 31px;
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
 }
-
-.header {
-  overflow: hidden;
+.highlight {
+    display: inline;
+    background-color: yellow;
 }
-
-.header-left {
-  float: left;
-  margin: 0; 
-  background-position: top left; 
-  border-radius: 10px;
-}
-
-.header-right {
-  float: right;
-  border-radius: 25px;
-  border: black solid 5px;
-  background-color: white;
-  margin: 20px;
-  padding: 20px;
-  transition-duration: 0.2s;
-}
-
-.header-right:hover {
-  border: black dashed 3px;
-  background-color: lightgrey;
-}
-
-
-.header-right.dark {
-  float: right;
-  border-radius: 25px;
-  border: black solid 5px;
-  background-color: white;
-  margin: 20px;
-  padding: 20px;
-  transition-duration: 0.2s;
-}
-
-.header-right.dark:hover {
-  border: black dashed 3px;
-  background-color: lightgrey;
+section h5 {
+    text-align: start;
 }
